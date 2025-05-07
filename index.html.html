@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cooklet | محل كوكيز</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- نافذة ترحيبية -->
+  <div class="welcome-popup" id="welcomePopup">
+    <div class="popup-content">
+      <p>أهلاً بكم في كوكلِت! موقع لتجربة.</p>
+      <button id="closePopup">حسناً</button>
+    </div>
+  </div>
+
+  <!-- خلفية الكوكيز -->
+  <div class="cookie-background">
+    <img src="/D142A5D8-E4A0-4ABD-A834-ED41EAE758DB.png" class="cookie float-down">
+    <img src="/D142A5D8-E4A0-4ABD-A834-ED41EAE758DB.png" class="cookie float-up">
+    <img src="/D142A5D8-E4A0-4ABD-A834-ED41EAE758DB.png" class="cookie float-down">
+    <img src="/D142A5D8-E4A0-4ABD-A834-ED41EAE758DB.png" class="cookie float-up">
+    <img src="/D142A5D8-E4A0-4ABD-A834-ED41EAE758DB.png" class="cookie float-down">
+  </div>
+
+  <div class="background-animation"></div>
+
+  <header>
+    <div class="social-icons">
+      <img src="/D4F9D5AB-D1BD-4EBA-AB7F-B9B8DE1870FF.png" alt="Snapchat" />
+      <img src="/C68E4834-2402-4BD6-B3EA-C6151C311E04.png" alt="Instagram" />
+      <img src="/26923F2B-B12A-442B-BD0F-DFDE7D1A3960.png" alt="Twitter" />
+    </div>
+    <div class="contact">
+      <span>0500860497 <img src="/C26157E3-CAF5-494D-A3A4-53367F1ADB1F.png" alt="Mobile" /></span>
+      <span>0500860497 <img src="/E2E26773-B966-41B2-9611-09C644C7D2A6.png" alt="Phone" /></span>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <h1>مرحباً بكم في Cooklet</h1>
+    <p>استمتعوا بأشهى أنواع الكوكيز لدينا!</p>
+  </section>
+
+  <main>
+    <h1 class="title">كوكيز عبدالعزيز</h1>
+    <p class="subtitle">أفضل أنواع الكوكيز بنكهات لا تُنسى</p>
+
+    <section class="products">
+      <div class="category">
+        <h2>كوكيز كلاسيكي</h2>
+        <img src="/sara-sperry--EMvlQ5n8n0-unsplash.jpg" alt="كوكيز عادي" />
+      </div>
+      <div class="category">
+        <h2>كوكيز دارك</h2>
+        <img src="/amanda-lim-THHG7NiPhNk-unsplash.jpg" alt="كوكيز دارك" />
+      </div>
+      <div class="category">
+        <h2>كوكيز وايت</h2>
+        <img src="/morgane-perraud-HKsBY3kg59g-unsplash.jpg" alt="كوكيز وايت" />
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>المنيو</h2>
+      <ul>
+        <li>كوكيز كلاسيك - 10 ريال</li>
+        <li>كوكيز دارك شوكليت - 12 ريال</li>
+        <li>كوكيز وايت شوكليت - 12 ريال</li>
+        <li>كوكيز محشو - 15 ريال</li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>من نحن</h2>
+      <p>كوكلِت هو محل متخصص في تقديم ألذ أنواع الكوكيز بنكهات مميزة وجودة عالية. نهتم بتجربة الزبون ونصنع منتجاتنا بحب.</p>
+    </section>
+
+    <section class="order-form">
+      <h2>طلب سريع</h2>
+      <form>
+        <input type="text" placeholder="الاسم" required />
+        <input type="tel" placeholder="رقم الجوال" required />
+        <select required>
+          <option disabled selected>اختر نوع الكوكيز</option>
+          <option>كلاسيك</option>
+          <option>دارك</option>
+          <option>وايت</option>
+          <option>محشو</option>
+        </select>
+        <button type="submit">إرسال الطلب</button>
+      </form>
+    </section>
+
+    <section class="reviews-section">
+      <h2>آراء العملاء</h2>
+      <div class="review-box">
+        <p>“الكوكيز لذيذ جداً والخدمة ممتازة!”</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <form class="review-form">
+        <label for="review">أضف رأيك:</label>
+        <textarea id="review" placeholder="اكتب رأيك هنا..."></textarea>
+        <div class="star-rating">
+          <span data-star="5">★</span>
+          <span data-star="4">★</span>
+          <span data-star="3">★</span>
+          <span data-star="2">★</span>
+          <span data-star="1">★</span>
+        </div>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+
+    <section class="contact-section">
+      <h2>موقعنا</h2>
+      <iframe src="https://www.google.com/maps?q=Jeddah&output=embed" frameborder="0" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <!-- زر واتساب -->
+  <a class="whatsapp-button" href="https://wa.me/966500860497" target="_blank" title="اطلب عبر واتساب">واتساب</a>
+
+  <!-- فوتر -->
+  <footer class="footer-dark">
+    <div class="footer-content">
+      <p>© 2025 كوكلِت | جميع الحقوق محفوظة</p>
+      <p>تصميم وتطوير عبدالعزيز  </p>
+      
+      <div class="footer-icons">
+      
+      </div>
+      <p>للتواصل: 0500860497</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
+</body>
+</html>

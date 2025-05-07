@@ -1,0 +1,340 @@
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  background-color: #FBDB93;
+  color: #641B2E;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* نافذة الترحيب */
+.welcome-popup {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.popup-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: #8A2D3B;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #8A2D3B;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.popup-content button:hover {
+  background-color: #641B2E;
+}
+
+/* خلفية زخرفية شفافة */
+.background-animation::before,
+.background-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('pattern.png');
+  background-size: 100px;
+  background-repeat: repeat;
+  opacity: 0.05;
+  z-index: -2;
+}
+
+/* صور الكوكيز المتحركة */
+.cookie-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.07;
+}
+.cookie {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+.float-up { animation-name: floatUp; }
+.float-down { animation-name: floatDown; }
+@keyframes floatUp {
+  0% { top: 100%; transform: rotate(0deg); }
+  100% { top: -10%; transform: rotate(360deg); }
+}
+@keyframes floatDown {
+  0% { top: -10%; transform: rotate(0deg); }
+  100% { top: 100%; transform: rotate(-360deg); }
+}
+
+/* الهيدر */
+header {
+  background-color: #8A2D3B;
+  color: #FBDB93;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.social-icons img,
+.contact img {
+  width: 20px;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.contact span {
+  margin-right: 10px;
+}
+
+/* قسم الترحيب */
+.hero-section {
+  border-radius: 0 0 100px 100px;
+  background-color: #FFF2CC;
+  background-image: url('14F3350B-3F36-4FA0-B093-749F8A0B25A0.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #641B2E;
+  text-shadow: 1px 1px 4px #FBDB93;
+  font-size: 2rem;
+}
+
+/* العناوين */
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 40px;
+  color: #641B2E;
+}
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/* المنتجات */
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.category {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.category h2 {
+  color: #8A2D3B;
+  margin-bottom: 10px;
+}
+.category img {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.category img:hover {
+  transform: scale(1.05);
+}
+
+/* المنيو */
+.menu-section {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 30px;
+  margin: 40px 20px;
+}
+.menu-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.menu-section ul {
+  list-style: none;
+  font-size: 18px;
+  color: #641B2E;
+}
+
+/* عنّا */
+.about-section {
+  background-color: #FCECD6;
+  padding: 40px 20px;
+  border-radius: 30px;
+  margin: 40px 20px;
+  text-align: center;
+}
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.about-section p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* نموذج الطلب */
+.order-form {
+  background-color: #FFF8E7;
+  padding: 40px 20px;
+  border-radius: 30px;
+  margin: 40px 20px;
+  text-align: center;
+}
+.order-form h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.order-form input,
+.order-form select {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.order-form button {
+  background-color: #8A2D3B;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.order-form button:hover {
+  background-color: #641B2E;
+}
+
+/* آراء العملاء */
+.reviews-section {
+  background-color: #FFF8E7;
+  padding: 40px 20px;
+  border-radius: 30px;
+  margin: 40px 20px;
+  text-align: center;
+}
+.reviews-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.review-box {
+  background-color: #ffffffcc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.stars {
+  color: #FFD700;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.review-form textarea {
+  width: 80%;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+  margin-bottom: 10px;
+}
+.review-form button {
+  background-color: #8A2D3B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.review-form button:hover {
+  background-color: #641B2E;
+}
+.star-rating span {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* خريطة جوجل */
+.contact-section {
+  text-align: center;
+  margin: 40px 20px;
+}
+.contact-section iframe {
+  width: 90%;
+  height: 300px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* زر واتساب */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 20;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+.whatsapp-button:hover {
+  background-color: #128C7E;
+}
+
+/* الفوتر */
+.footer-dark {
+  background-color: #1c1c1c;
+  color: #FBDB93;
+  text-align: center;
+  padding: 30px 20px;
+}
+.footer-dark .footer-icons img {
+  width: 24px;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.footer-dark p {
+  margin: 10px 0;
+}
