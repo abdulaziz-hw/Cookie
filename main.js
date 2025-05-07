@@ -1,5 +1,5 @@
-// نافذة الترحيب تظهر مرة واحدة فقط
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  // نافذة الترحيب تظهر مرة واحدة فقط
   const popup = document.querySelector('.welcome-popup');
   const closeBtn = document.querySelector('#closePopup');
   
@@ -13,10 +13,8 @@ window.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('popupClosed', 'true');
     });
   }
-});
-
-// تقييم النجوم
-document.addEventListener('DOMContentLoaded', () => {
+  
+  // تقييم النجوم
   const stars = document.querySelectorAll('.star-rating span');
   stars.forEach((star, index) => {
     star.addEventListener('click', () => {
@@ -25,10 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-});
-
-// منع إعادة تحميل الصفحة عند إرسال النماذج
-document.addEventListener('DOMContentLoaded', () => {
+  
+  // منع إعادة تحميل الصفحة عند إرسال النماذج
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -36,10 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
       form.reset();
     });
   });
-});
-
-// تمرير ناعم للروابط داخل الصفحة
-document.addEventListener('DOMContentLoaded', () => {
+  
+  // تمرير ناعم للروابط داخل الصفحة
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
